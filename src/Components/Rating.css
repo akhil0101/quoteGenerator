@@ -1,0 +1,11 @@
+input[type="radio"]{
+    display: none;
+}
+.star{
+    cursor: pointer;
+    transition: color 100ms;
+    -webkit-transition: color 100ms;
+    -moz-transition: color 100ms;
+    -ms-transition: color 100ms;
+    -o-transition: color 100ms;
+}
