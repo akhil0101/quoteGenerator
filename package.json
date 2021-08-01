@@ -1,5 +1,6 @@
 {
-  "homepage": "http://akhil0101.github.io/quoteGenerator",
+  
+  "homepage": "http://akhil0101.github.io/quoteGenerator", 
   "name": "QuoteGenerator",
   "version": "0.1.0",
   "private": true,
