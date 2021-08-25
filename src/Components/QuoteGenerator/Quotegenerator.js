@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import { Rate ,Button,message} from 'antd';
 import 'antd/dist/antd.css';
-import {getSimilarQuote,getRandomnQuote} from '../StringSimilarity/StringSimilarity'
+import {getSimilarQuote,getVeryDifferentQuote} from '../../utils/StringSimilarity'
 import Styles from './QuoteGenerator.module.css'
-import {performFetchCall} from '../../Api/PerformFetchcall'
+import {performFetchCall} from '../../api/PerformFetchcall'
 import Loading from '../Loading/Loading'
 
 
@@ -34,17 +34,14 @@ function Quotegenerator() {
       }
 
       function getNewQuote() {
-       if(rating===0){
-    message.error('Please rate the quote',1);
-       }
-       else if (rating > 3) {
+       if (rating > 3) {
         const Similar = getSimilarQuote(currentQuote.text, allQuotes);
           removeCurrentQuote(currentQuote.text, allQuotes)
           console.log(allQuotes.length);
           setCurrentQuote(Similar[0]);
           setRating(0);
         } else {
-          const unSimilar = getRandomnQuote(currentQuote.text, allQuotes);
+          const unSimilar = getVeryDifferentQuote(currentQuote.text, allQuotes);
           removeCurrentQuote(currentQuote.text, allQuotes)
           setCurrentQuote(unSimilar[0]);
           setRating(0);
@@ -56,7 +53,7 @@ function Quotegenerator() {
             <div className ={Styles.main}>
               <div className ={Styles.quote}>
                 <blockquote>
-                  <p>{currentQuote.text}</p>
+                  <div className={Styles.text}>{currentQuote.text}</div>
                 </blockquote>
                 <figcaption>
                   <cite>{currentQuote.author}</cite>

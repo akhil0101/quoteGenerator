@@ -13,7 +13,7 @@ function getSimilarQuote(currentQuote, allQuotes) {
   return matchingQuote;
 }
 
-function getRandomnQuote(currentQuote, allQuotes) {
+function getVeryDifferentQuote(currentQuote, allQuotes) {
   const extractAllQuotes = allQuotes.map((x) => {
     return x.text;
   });
@@ -32,4 +32,4 @@ function findSimilarString(currentQuote, allQuotes) {
   const matchingResult = stringSimilarity.findBestMatch(currentQuote, allQuotes);
   return matchingResult;
 }
-export { getSimilarQuote, getRandomnQuote};
+export { getSimilarQuote, getVeryDifferentQuote};
