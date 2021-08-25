@@ -1,0 +1,42 @@
+
+.header{
+    flex-shrink: 0;
+    background-color: var(--content);
+    text-align: center;
+ 
+    padding: 0.5rem 0.5rem;
+    font-weight: 500;
+    box-shadow: 0px 0px 2px 1px #a3a3a3;
+    animation: fadeIn 500ms ease-in 200ms;
+    animation-fill-mode: both;
+    transform-origin: 50% 100%;
+    -webkit-animation: fadeIn 500ms ease-in 200ms;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.text{
+    font-size: 20px;
+
+     display: inline-block;
+    color: var(--text);
+    cursor: pointer;
+}
+  
+@keyframes fadeIn {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  .logo{
+    width: 40px;
+ object-fit:fill;
+    height: 40px;
+    
+  }

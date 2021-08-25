@@ -1,34 +1,4 @@
-*{
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
 
 
-.App {
-  text-align: center;
-  text-shadow: grey;
-  background-color: #d1d1d1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  min-height: 100vh;
-}
-/* .align{
-  display: flex;
-  flex-direction: row;
-} */
 
-.heading{
-  position: absolute;
-  top:5px;
-  background-color: #d1d1d1 !important;
-  width: 100vw;
-  padding: 15px 0px;
-}
-.footer{
-  background-color: #d1d1d1
-}
 
