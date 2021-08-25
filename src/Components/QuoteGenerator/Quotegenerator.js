@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { Rate ,Button,message} from 'antd';
+import { Rate ,Button} from 'antd';
 import 'antd/dist/antd.css';
 import {getSimilarQuote,getVeryDifferentQuote} from '../../utils/StringSimilarity'
 import Styles from './QuoteGenerator.module.css'
@@ -37,13 +37,13 @@ function Quotegenerator() {
        if (rating > 3) {
         const Similar = getSimilarQuote(currentQuote.text, allQuotes);
           removeCurrentQuote(currentQuote.text, allQuotes)
-          console.log(allQuotes.length);
+         
           setCurrentQuote(Similar[0]);
           setRating(0);
         } else {
-          const unSimilar = getVeryDifferentQuote(currentQuote.text, allQuotes);
+          const VeryDifferent = getVeryDifferentQuote(currentQuote.text, allQuotes);
           removeCurrentQuote(currentQuote.text, allQuotes)
-          setCurrentQuote(unSimilar[0]);
+          setCurrentQuote(VeryDifferent[0]);
           setRating(0);
         }
       }
