@@ -3,7 +3,7 @@ import { Rate ,Button} from 'antd';
 import 'antd/dist/antd.css';
 import {getSimilarQuote,getVeryDifferentQuote} from '../../utils/StringSimilarity'
 import Styles from './QuoteGenerator.module.css'
-import {performFetchCall} from '../../api/PerformFetchcall'
+import {performFetchCall} from '../../Api/PerformFetchcall'
 import Loading from '../Loading/Loading'
 
 
